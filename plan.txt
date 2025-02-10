@@ -1,0 +1,7 @@
+Integrate API 
+
+- Yahoo Finanace API for stock prices
+- NewsAPI for news
+- Twitter API (tweety) - set up Twitter dev account
+
+Install dependencies 
