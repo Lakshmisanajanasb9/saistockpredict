@@ -2,6 +2,14 @@ Integrate API
 
 - Yahoo Finanace API for stock prices
 - NewsAPI for news
-- Twitter API (tweety) - set up Twitter dev account
+- Twitter API (tweepy) - set up Twitter dev account
 
-Install dependencies 
+Install dependencies
+
+Framework: Flask/FastAPI for API development.
+External APIs: Stock price, News, and Twitter (Tweepy).
+Sentiment Analysis: VADER/TextBlob for Twitter & news sentiment.
+ML Model: scikit-learn/XGBoost for stock prediction.
+Database: SQLite/PostgreSQL (depending on persistence needs).
+Testing: Postman for API testing.
+Deployment: Heroku, AWS, or GCP for hosting.
