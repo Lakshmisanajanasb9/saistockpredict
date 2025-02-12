@@ -1,3 +1,4 @@
 yfinance 
 tweepy 
 requests 
+newsapi-python
