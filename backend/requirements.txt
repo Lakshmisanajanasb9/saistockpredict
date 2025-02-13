@@ -3,4 +3,4 @@ yfinance
 tweepy 
 requests 
 newsapi-python
-
+yahoo_fin
