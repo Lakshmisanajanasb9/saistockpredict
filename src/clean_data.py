@@ -16,6 +16,9 @@ train_df = (train - mean)/std
 eval_df = (val - mean)/std
 test_df = (test - mean)/std
 
-train_df.to_csv("C:\Users\brkbr\Downloads\saistockpredict\data\train_dt.csv",index=True)
-eval_df.to_csv("C:\Users\brkbr\Downloads\saistockpredict\data\eval_dt.csv",index=True)
-test_df.to_csv("C:\Users\brkbr\Downloads\saistockpredict\data\test_dt.csv",index=True)
+window = WindowGenerator(input_width=60, label_width=1, shift=1, train_df=train_df, val_df=eval_df, test_df=test_df, label_columns=["Close"])
+
+
+#train_df.to_csv("C:\Users\brkbr\Downloads\saistockpredict\data\train_dt.csv",index=True)
+#eval_df.to_csv("C:\Users\brkbr\Downloads\saistockpredict\data\eval_dt.csv",index=True)
+#test_df.to_csv("C:\Users\brkbr\Downloads\saistockpredict\data\test_dt.csv",index=True)
