@@ -1,4 +1,5 @@
 import tensorflow as tf 
+import numpy as np
 
 class WindowGenerator():
   def __init__(self, input_width, label_width, shift,
@@ -85,3 +86,8 @@ def val(self):
 @property
 def test(self):
   return self.make_dataset(self.test_df)
+
+
+WindowGenerator.train = train
+WindowGenerator.val = val
+WindowGenerator.test = test 
