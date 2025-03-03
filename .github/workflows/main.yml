@@ -12,6 +12,7 @@ jobs:
 
       - name: Install Docker
         run: |
+          # Remove any conflicting Docker packages
           sudo apt-get update
           sudo apt-get remove --purge docker docker-engine docker.io containerd runc -y
           sudo apt-get autoremove -y
@@ -20,12 +21,14 @@ jobs:
           # Install required dependencies
           sudo apt-get install -y ca-certificates curl gnupg lsb-release
 
-          # Add Docker's official GPG key and repository
+          # Add Docker's official GPG key (ensure it's added correctly)
           sudo mkdir -p /etc/apt/keyrings
           curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo tee /etc/apt/keyrings/docker.gpg > /dev/null
+
+          # Add Docker repository to APT sources list
           echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-          # Update and install Docker
+          # Update package list and install Docker
           sudo apt-get update
           sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 
