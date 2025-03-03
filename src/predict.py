@@ -8,11 +8,10 @@ import matplotlib.pyplot as plt
 model = load_model(r"C:\Users\brkbr\Downloads\saistockpredict\models\lstm_model.keras")
 
 #wide_window.plot(baseline)
-#window.plot(model)
+wide_window.plot(model)
 #print(window.example)
 
 
-conv_window.plot()
 
 plt.show()
 

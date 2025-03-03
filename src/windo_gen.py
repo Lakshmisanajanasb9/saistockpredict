@@ -132,9 +132,11 @@ def plot(self, model=None, plot_col='Next_close', max_subplots=3):
       if predictions.ndim == 2:  # Shape: (batch_size, num_labels)
         plt.scatter(self.label_indices, predictions[n, label_col_index], marker='X', edgecolors='k', label='Predictions',c='#ff7f0e', s=64)
       else:    
-        plt.scatter(self.label_indices, predictions[n, :, label_col_index],
+        if len(predictions) == len(self.label_indices):
+                    plt.scatter(self.label_indices, predictions[n, :, label_col_index],
                     marker='X', edgecolors='k', label='Predictions',
                     c='#ff7f0e', s=64)
+                    
 
     if n == 0:
       plt.legend()
